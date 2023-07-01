@@ -29,26 +29,23 @@
 
 <body>
  
-  <header><!-- inicio Cabecalho -->
-    <nav class="navbar navbar-expand-md navbar-light fixed-top navbar-transparente">
+  <header>
+    <nav id="barra-navegacao" class="navbar navbar-expand-md navbar-light visivel navbar-transparente fixed-top">
       <div class="container">
-
         <a href="index.html" class="navbar-brand">
           <img src="imagens/logo-temporariasvg.svg" width="142">
         </a>
-
         <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
           <i class="fas fa-bars text-white"></i>
         </button>
-
         <div class="collapse navbar-collapse" id="nav-principal">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="" class="nav-link">Sobre nós</a>
+              <a href="#recursos" class="nav-link">Sobre nós</a>
             </li>
             <li class="nav-item divisor"></li>
             <li class="nav-item">
-              <a href="" class="nav-link">Projetos</a>
+              <a href="#servicos" class="nav-link">Projetos</a>
             </li>
             <li class="nav-item divisor"></li>
             <li class="nav-item">
@@ -56,10 +53,10 @@
             </li>
           </ul>
         </div>
-
       </div>
     </nav>
-  </header><!--/fim Cabecalho -->
+  </header>
+<!--/fim Cabecalho -->
  <!--- MENU INICIAL GIGANTE-->
  <section id="home" class="d-flex">
   <div class="container align-self-center">
@@ -70,11 +67,11 @@
                   <div class="carousel-inner"><!--Inner -->
 
                       <div class="carousel-item active">
-                       <img src="imagens/iphone2.png" class="img-fluid iphone" alt="">
+                       <img src="imagens/telafigma-prontuario.png" class="img-fluid iphone" alt="">
                       </div>
 
                       <div class="carousel-item">
-                         <img src="imagens/iphone2.png" class="img-fluid iphones" alt="">
+                         <img src="imagens/telafigma-prontuario2-PhotoRoom.png-PhotoRoom.png" class="img-fluid iphones" alt="">
                       </div>
 
                   </div><!--/Inner -->
@@ -108,6 +105,55 @@
   </section>
 
 
+  <!-- AQUI É RODAPÉ, PRECISAS DEPOIS ADICIONAR O LOGO E TALVEZ ADICIONAR MAIS LINKS, TIPO O DO TALVEZ FUTURO INSTAGRAM   -->
+  <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="imagens/logo temporaria.png" width="142" alt="">
+            </div>
+            <div class="col-md-2">
+                <h4>Links úteis</h4>
+                <ul class="navbar-nav">
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Membros</a></li>
+                    <li><a href="">Apoiar</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h4>Projetos</h4>
+                <ul class="navbar-nav">
+                    <li><a href="EdFisica.html">Educação fisica</a></li>
+                    <li><a href="Prontuario.html">Pronturio eletrônico</a></li>
+                    <li><a href="">Futuro</a></li>
+                    <li><a href="">Futuro</a></li>
+                </ul>
+            </div>
+            <!-- SE VC PERCEBER, AQUI EXISTEM COISAS QUE NÃO APARECEM LÁ NO SITE, ELES ESTÃO MARCADOS COMO INVICIVEIS, CASO PRECISE TRANSFORMAR EM VISIVEL É SO APAGAR A PALAVRA  INVICIBLE -->
+            <div class="col-md-2 invisible">
+                <h4>Links úteis</h4>
+                <ul class="navbar-nav">
+                    <li><a href="">Sobre</a></li>
+                    <li><a href="">Membros</a></li>
+                    <li><a href="">Apoiar</a></li>
+                    <li><a href="">Contato</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-right">
+                <ul>
+                    <li>
+                        <a href=""><img src="imagens/instagram.png" alt=""> </a>
+                    </li> <!-- FOTOS REDES SOCIAIS   -->
+                    <li>
+                        <a href=""><img src="imagens/twitter.png" alt=""> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</footer>
 
 
   <!-- JavaScript (Opcional) -->
@@ -121,6 +167,22 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+
+<script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          // Mostrar a barra de navegação
+          document.getElementById("barra-navegacao").classList.remove("navbar-hidden");
+        } else {
+          // Ocultar a barra de navegação
+          document.getElementById("barra-navegacao").classList.add("navbar-hidden");
+        }
+        prevScrollpos = currentScrollPos;
+      }
+</script>
+
 
 </body>
 
