@@ -1,4 +1,6 @@
 
+
+/* Layout
 -----------------------------*/
 html, body, #home {
 	height: 99%;
@@ -251,3 +253,44 @@ footer ul li{
 .carousel img {
 	max-width: 270px;
   }
+
+.iphone-pequeno{
+	height: 600;
+	width: 800;
+}
+
+#membros{
+	.image-container {
+		display: flex;
+		flex-wrap: wrap;
+	  }
+	  
+	  .image-wrapper {
+		text-align: center;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	  }
+	  
+	  .image-wrapper img {
+		width: 250px;
+		height: 250px;
+		object-fit: cover;
+		border-radius: 50%;
+	  }
+	  
+	  .image-text {
+		margin-top: 20px;
+	  }
+	  
+	  .hover-effect:hover {
+		filter: brightness(30%);
+		transition:filter opacity 0.3s ease; /* Adiciona uma transição suave de 0,3 segundos */
+	  }
+	  
+	  #texto-membro {
+		padding-top: 70px;
+		color: #9bf0d1;
+	  }
+	  
+}
