@@ -1,5 +1,3 @@
-
-
 /* Layout
 -----------------------------*/
 html, body, #home {
@@ -8,82 +6,248 @@ html, body, #home {
 
 #index {
 	background: url(../imagens/capa.png),
-				url(../imagens/ruido.png),
-				linear-gradient(50deg,#ff4169,#7c26f8);
+		url(../imagens/ruido.png),
+		linear-gradient(50deg, #ff4169, #7c26f8);
 	background-attachment: fixed;
-	font-family: Helvetica,Arial,sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 #Edfisica {
 	background: url(../imagens/capa.png),
-				url(../imagens/ruido.png),
-				linear-gradient(50deg,#ff4169,#7c26f8);
+		url(../imagens/ruido.png),
+		linear-gradient(50deg, #ff4169, #7c26f8);
 	background-attachment: fixed;
-	font-family: Helvetica,Arial,sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 #prontuario {
 	background: url(../imagens/capa.png),
-				url(../imagens/ruido.png),
-				linear-gradient(50deg,#ff4169,#7c26f8);
+		url(../imagens/ruido.png),
+		linear-gradient(50deg, #ff4169, #7c26f8);
 	background-attachment: fixed;
-	font-family: Helvetica,Arial,sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 #membros {
 	background: url(../imagens/capa.png),
-				url(../imagens/ruido.png),
-				linear-gradient(50deg,#ff4169,#7c26f8);
+		url(../imagens/ruido.png),
+		linear-gradient(50deg, #ff4169, #7c26f8);
 	background-attachment: fixed;
-	font-family: Helvetica,Arial,sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 
 	.image-container {
 		display: flex;
 		flex-wrap: wrap;
-	  }
-	  
-	  .image-wrapper {
+	}
+
+	.image-wrapper {
 		text-align: center;
 		margin-right: 20px;
 		margin-bottom: 20px;
 		margin-top: 20px;
 		margin-left: 3.9%;
-	  }
-	  
-	  .image-wrapper img {
+	}
+
+	.image-wrapper img {
 		width: 270px;
 		height: 270px;
 		object-fit: cover;
 		border-radius: 50%;
-	  }
-	  
-	  .image-text {
-		margin-top: 20px;
-	  }
-	  
-	  .hover-effect:hover {
+	}
+
+	.image-text {
+		margin-top: 15px;
+		opacity: 0;
+		transition: opacity 0.3s;
+
+	}
+
+	.hover-effect:hover {
 		filter: brightness(30%);
-		transition:filter opacity 1s ease; /* Adiciona uma transição suave de 0,3 segundos */
-	  }
-	  
-	  #texto-membro {
+		transition: filter opacity 1s ease;
+		/* Adiciona uma transição suave de 0,3 segundos */
+	}
+
+	#texto-membro {
 		padding-top: 70px;
 		color: #9bf0d1;
-	  }
-	  
-	  .circle-border{
+	}
+
+	.circle-border {
 		border: 4px solid black;
-	  }
+	}
+
+	.image-wrapper:hover .image-text {
+		opacity: 1;
+	}
 
 }
 
+
+#perfil_bia {
+	.card-client {
+		background: #2cb5a0;
+		width: 14.5rem;
+		padding-top: 25px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border: 4px solid #7cdacc;
+		box-shadow: 0 6px 10px rgba(207, 212, 222, 1);
+		border-radius: 10px;
+		text-align: center;
+		color: #fff;
+		font-family: "Poppins", sans-serif;
+		transition: all 0.3s ease;
+		position: relative;
+		left: 190px;
+		top: 80px;
+	}
+
+	.card-client:hover {
+		transform: translateY(-10px);
+	}
+
+	.user-picture {
+		overflow: hidden;
+		object-fit: cover;
+		width: 12rem;
+		height: 12rem;
+		border: 4px solid #2cb5a0;
+		border-radius: 999px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+	}
+
+	.user-picture svg {
+		width: 2.5rem;
+		fill: currentColor;
+	}
+
+	.name-client {
+		margin: 0;
+		margin-top: 20px;
+		font-weight: 600;
+		font-size: 18px;
+	}
+
+	.name-client span {
+		display: block;
+		font-weight: 200;
+		font-size: 16px;
+	}
+
+	.social-media:before {
+		content: " ";
+		display: block;
+		width: 100%;
+		height: 2px;
+		margin: 20px 0;
+		background: #7cdacc;
+	}
+
+	.social-media a {
+		position: relative;
+		margin-right: 15px;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.social-media a:last-child {
+		margin-right: 0;
+	}
+
+	.social-media a svg {
+		width: 1.1rem;
+		fill: currentColor;
+	}
+
+	/*-- Tooltip Social Media --*/
+	.tooltip-social {
+		background: #262626;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		padding: 0.5rem 0.4rem;
+		border-radius: 5px;
+		font-size: 0.8rem;
+		font-weight: 600;
+		opacity: 0;
+		pointer-events: none;
+		transform: translate(-50%, -90%);
+		transition: all 0.2s ease;
+		z-index: 1;
+	}
+
+	.tooltip-social:after {
+		content: " ";
+		position: absolute;
+		bottom: 1px;
+		left: 50%;
+		border: solid;
+		border-width: 10px 10px 0 10px;
+		border-color: transparent;
+		transform: translate(-50%, 100%);
+	}
+
+	.social-media a .tooltip-social:after {
+		border-top-color: #262626;
+	}
+
+	.social-media a:hover .tooltip-social {
+		opacity: 1;
+		transform: translate(-50%, -130%);
+	}
+	#area-texto{
+		background-color: red;
+		float: right;
+		width: 60%;
+		left: 0%;
+		position: relative;
+		bottom: 290px;
+		right: 200px;
+	}
+	
+	/* Defina o tamanho das imagens retangulares */
+.galeria img {
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+    height: 200px; /* Ajuste o tamanho conforme necessário */
+    margin-left: 100px; /* Adiciona uma margem entre as imagens */
+	top: 120px;
+    float: left; /* Faz as imagens flutuarem à esquerda para que fiquem em linha */
+	position: relative;
+	left: 70px;
+	margin-top: 30px;
+	bottom: 20px;
+}
+
+#foto1{
+	position: relative;
+	bottom: 900px;
+}
+
+/* Limpa a flutuação após as linhas de imagens */
+.galeria::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+
+
+}/* fim perfil bia /*
 
 
 /* Barra de navegação
 -----------------------------*/
 nav.navbar-transparente {
 	padding: 5px 0px;
-	background: rgba(0,0,0,0.7);
+	background: rgba(0, 0, 0, 0.7);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -95,8 +259,8 @@ nav.navbar-transparente {
 }
 
 .navbar-light .navbar-toggler {
-    color: rgba(255,255,255,.5);
-    border-color: rgba(255,255,255,0.5);
+	color: rgba(255, 255, 255, .5);
+	border-color: rgba(255, 255, 255, 0.5);
 }
 
 .divisor {
@@ -105,12 +269,15 @@ nav.navbar-transparente {
 	margin: 12px 15px;
 }
 
-.navbar{
+.navbar {
 	height: 9%;
 	transition: top 0.3s;
 }
+
 .navbar-hidden {
-	top: -70px;}
+	top: -70px;
+}
+
 /* Capa
 -----------------------------*/
 .capa {
@@ -121,10 +288,10 @@ nav.navbar-transparente {
 	color: white;
 	border-radius: 500px;
 	-webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
-    text-transform: uppercase;
-    transition: background 0.4s, color 0.4s;
-    padding: 10px 20px;
+	-moz-border-radius: 500px;
+	text-transform: uppercase;
+	transition: background 0.4s, color 0.4s;
+	padding: 10px 20px;
 }
 
 .btn-roxo {
@@ -147,11 +314,12 @@ nav.navbar-transparente {
 
 /* conteudos
 -----------------------------*/
-.caixa{
+.caixa {
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
-#servicos{
+
+#servicos {
 	background: white;
 }
 
@@ -159,21 +327,24 @@ nav.navbar-transparente {
 	color: white;
 }
 
-#servicos h2,h3 {
+#servicos h2, h3 {
 	color: #7c25f8;
 }
-#recursos h3{
+
+#recursos h3 {
 	color: #9bf0e1;
 }
-#recursos h2{
+
+#recursos h2 {
 	color: white;
 }
 
 
 
-.albuns{
+.albuns {
 	padding: 10px 0;
 }
+
 /* Tipografia
 -----------------------------*/
 h1 {
@@ -183,7 +354,7 @@ h1 {
 	color: white;
 }
 
-h2{
+h2 {
 	font-size: 3em;
 	font-weight: 700;
 	letter-spacing: -0.04em;
@@ -192,7 +363,7 @@ h2{
 h3 {
 	font-size: 2em;
 	font-weight: 700;
-    letter-spacing: -0.04em;
+	letter-spacing: -0.04em;
 }
 
 /* Extra small devices (portrait phones, less than 576px)*/
@@ -207,6 +378,7 @@ h3 {
 	h1 {
 		font-size: 3em;
 	}
+
 	.btn-custom {
 		margin: 10px 15px;
 	}
@@ -235,81 +407,82 @@ h3 {
 
 
 
-footer{
-    background: #000;
-    padding: 50px 0px 20px 0px;
-    position: relative;
+footer {
+	background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative;
 	height: 220;
 }
 
-footer h4{
-    color: #919496;
-    font-size: 0.8em;
-    text-transform: uppercase;
+footer h4 {
+	color: #919496;
+	font-size: 0.8em;
+	text-transform: uppercase;
 }
 
-footer .navbar-nav a{
-    color: white;
-    font-size: 0.8em;
+footer .navbar-nav a {
+	color: white;
+	font-size: 0.8em;
 }
 
-footer .navbar-nav a:hover{
-    color: #9bf0d1;
-    text-decoration: none;
+footer .navbar-nav a:hover {
+	color: #9bf0d1;
+	text-decoration: none;
 }
 
-footer ul{
-    list-style: none;
+footer ul {
+	list-style: none;
 }
 
-footer ul li{
-    float: right;
-    margin: 0 5px;
-    
+footer ul li {
+	float: right;
+	margin: 0 5px;
+
 }
 
 
 
 
 .custom-class {
-    padding-left: 450px;
-    font-size: 20px;
-  }
-
-.animation{
-    float: none;
-    margin: 0 auto;
-    font-family: monospace;
-    border-right: 4px solid;
-    width:14ch ;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s;
+	padding-left: 450px;
+	font-size: 20px;
 }
 
-@keyframes typing{
-    from{
-        width: 0;
-    }
+.animation {
+	float: none;
+	margin: 0 auto;
+	font-family: monospace;
+	border-right: 4px solid;
+	width: 14ch;
+	white-space: nowrap;
+	overflow: hidden;
+	animation: typing 3s;
+}
+
+@keyframes typing {
+	from {
+		width: 0;
+	}
 }
 
 @keyframes blinking {
-    50%{
-        border-color: transparent;
-    }
+	50% {
+		border-color: transparent;
+	}
 }
 
-.efeito-hover{
-    transition: transform 0.3s;
+.efeito-hover {
+	transition: transform 0.3s;
 }
-.efeito-hover:hover{
-    transform: scale(1.1);
-    
+
+.efeito-hover:hover {
+	transform: scale(1.1);
+
 }
 
 
 /* parte projetos.html*/
-.jumbotron h1{
+.jumbotron h1 {
 	color: black;
 
 }
@@ -317,10 +490,9 @@ footer ul li{
 
 .carousel img {
 	max-width: 270px;
-  }
+}
 
-.iphone-pequeno{
+.iphone-pequeno {
 	height: 600;
 	width: 800;
 }
-
