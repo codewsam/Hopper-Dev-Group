@@ -86,7 +86,7 @@ html, body, #home {
 
 #perfil_bia {
 	.card-client {
-		background: #2cb5a0;
+		background:linear-gradient(50deg, #ff4169, #7c26f8);
 		width: 14.5rem;
 		padding-top: 25px;
 		padding-bottom: 20px;
@@ -202,13 +202,13 @@ html, body, #home {
 		transform: translate(-50%, -130%);
 	}
 	#area-texto{
-		background-color: red;
-		float: right;
 		width: 60%;
-		left: 0%;
+		left: 38%;
 		position: relative;
 		bottom: 290px;
-		right: 200px;
+		right: 200%;
+		text-align: justify;
+		word-wrap: break-word;
 	}
 	
 	/* Defina o tamanho das imagens retangulares */
@@ -216,10 +216,10 @@ html, body, #home {
     width: 300px; /* Ajuste o tamanho conforme necessário */
     height: 200px; /* Ajuste o tamanho conforme necessário */
     margin-left: 100px; /* Adiciona uma margem entre as imagens */
-	top: 120px;
+	top: 5px;
     float: left; /* Faz as imagens flutuarem à esquerda para que fiquem em linha */
 	position: relative;
-	left: 70px;
+	left: 90px;
 	margin-top: 30px;
 	bottom: 20px;
 }
