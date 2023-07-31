@@ -104,13 +104,11 @@
 </section>
 <br>
 <br>
-<br>
-<br>
-<br>
+
 <section>
   <div class="galeria">
     <img id="foto1" src="imagens/paisagem.png" alt="Foto 1">
-    <img src="imagens/paisagem.png" alt="Foto 2">
+    <img src="imagens/paisagem.png" class="border shadow" alt="Foto 2">
     <img src="imagens/paisagem.png" alt="Foto 3">
     <img src="imagens/paisagem.png" alt="Foto 3">
     <img src="imagens/paisagem.png" alt="Foto 3">
@@ -118,7 +116,58 @@
     <!-- Repita as linhas de imagens conforme necessário -->
 </div>
 </section>
+<br>
+<br>
+<br>
 
+<footer>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-2">
+              <img src="imagens/logo e tipografia.png" width="152" alt="">
+          </div>
+          <div class="col-md-2">
+              <h4>Links úteis</h4>
+              <ul class="navbar-nav">
+                  <li><a href="">Sobre</a></li>
+                  <li><a href="">Membros</a></li>
+                  <li><a href="">Apoiar</a></li>
+                  <li><a href="">Contato</a></li>
+              </ul>
+          </div>
+          <div class="col-md-2">
+              <h4>Projetos</h4>
+              <ul class="navbar-nav">
+                  <li><a href="EdFisica.html">Educação fisica</a></li>
+                  <li><a href="Prontuario.html">Pronturio eletrônico</a></li>
+                  <li><a href="">Futuro</a></li>
+                  <li><a href="">Futuro</a></li>
+              </ul>
+          </div>
+          <!-- SE VC PERCEBER, AQUI EXISTEM COISAS QUE NÃO APARECEM LÁ NO SITE, ELES ESTÃO MARCADOS COMO INVICIVEIS, CASO PRECISE TRANSFORMAR EM VISIVEL É SO APAGAR A PALAVRA  INVICIBLE -->
+          <div class="col-md-2 invisible">
+              <h4>Links úteis</h4>
+              <ul class="navbar-nav">
+                  <li><a href="">Sobre</a></li>
+                  <li><a href="">Membros</a></li>
+                  <li><a href="">Apoiar</a></li>
+                  <li><a href="">Contato</a></li>
+              </ul>
+          </div>
+          <div class="col-md-4 text-right">
+              <ul>
+                  <li>
+                      <a href=""><img src="imagens/instagram.png" alt=""> </a>
+                  </li> <!-- FOTOS REDES SOCIAIS   -->
+                  <li>
+                      <a href=""><img src="imagens/twitter.png" alt=""> </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+</footer>
 
 
 
@@ -133,6 +182,28 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
+
+
+
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          // Mostrar a barra de navegação
+          document.getElementById("barra-navegacao").classList.remove("navbar-hidden");
+        } else {
+          // Ocultar a barra de navegação
+          document.getElementById("barra-navegacao").classList.add("navbar-hidden");
+        }
+        prevScrollpos = currentScrollPos;
+      }
+    </script>
+    
+
+    
+
+
 
 </body>
 
